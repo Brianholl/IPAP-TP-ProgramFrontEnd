@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Gastos Personales - Mis Gastos</title>
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+
+  <div class="contenedor">
+
+    <
+    <header>
+      <h1>Mis Gastos</h1>
+      <p>Calculadora simple para llevar el control diario de tus gastos.</p>
+    </header>
+
+
+    <main>
+
+
+      <section class="seccion-formulario">
+        <h2>Cargar nuevo gasto</h2>
+        <form id="form-gasto" novalidate>
+          <div class="campo">
+            <label for="concepto">Concepto:</label>
+            <input type="text" id="concepto" placeholder="Ej: Supermercado, Alquiler...">
+          </div>
+
+          <div class="campo">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria">
+              <option value="">Elegí una categoría</option>
+              <option value="Comida">Comida</option>
+              <option value="Transporte">Transporte</option>
+              <option value="Servicios">Servicios</option>
+              <option value="Salud">Salud</option>
+              <option value="Entretenimiento">Entretenimiento</option>
+              <option value="Otros">Otros</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="monto">Monto ($):</label>
+            <input type="number" id="monto" step="0.01" min="0" placeholder="Ej: 1500.50">
+          </div>
+
+          <button type="submit" class="btn-primario">Agregar gasto</button>
+
+
+          <p id="mensaje-error" class="error"></p>
+        </form>
+      </section>
+
+
+      <section class="seccion-listado">
+        <h2>Listado de gastos</h2>
+
+
+        <table>
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Categoría</th>
+              <th>Monto</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="lista-gastos">
+
+          </tbody>
+        </table>
+
+
+        <p id="sin-gastos">Todavía no cargaste ningún gasto.</p>
+
+
+        <div class="bloque-total">
+          <p>Total: <strong id="total">$0.00</strong></p>
+          <button id="borrar-todo" type="button" class="btn-secundario">Borrar todo</button>
+        </div>
+      </section>
+
+    </main>
+
+    
+    <footer>
+      <p>Integrantes: Yanina Elizabeth Ovejero y Brian Iván Hollweg</p>
+      <p>IPAP - Programación Frontend - 2026</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

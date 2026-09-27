@@ -1,0 +1,243 @@
+/* Reseteo básico*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333333;
+  line-height: 1.5;
+  padding: 20px 10px;
+}
+
+/* Contenedor principal centrado */
+.contenedor {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #2563eb;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #666666;
+  font-size: 14px;
+}
+
+/* Títulos de cada sección */
+h2 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 5px;
+}
+
+/* Espaciado entre secciones */
+.seccion-formulario {
+  margin-bottom: 30px;
+}
+
+.seccion-listado {
+  margin-bottom: 20px;
+}
+
+/* Formulario: etiquetas ubicadas arriba de cada input */
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Botón principal para enviar formulario */
+.btn-primario {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primario:hover {
+  background-color: #1d4ed8;
+}
+
+/* Botón secundario para borrar todo */
+.btn-secundario {
+  background-color: #6b7280;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secundario:hover {
+  background-color: #4b5563;
+}
+
+/* Mensajes de error en color rojo */
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 18px;
+}
+
+/* Estilos de la tabla de gastos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+table th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+}
+
+/* Filas alternadas con fondo suave */
+table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Botón chico y rojo para eliminar fila individual */
+.btn-eliminar {
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: #b91c1c;
+}
+
+/* Párrafo para cuando todavía no hay gastos cargados */
+#sin-gastos {
+  text-align: center;
+  color: #666666;
+  font-style: italic;
+  padding: 15px;
+  background-color: #f9fafb;
+  border: 1px dashed #cccccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Contenedor del total y el botón de borrado */
+.bloque-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.bloque-total p {
+  font-size: 16px;
+}
+
+.bloque-total strong {
+  color: #2563eb;
+  font-size: 18px;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-size: 12px;
+  color: #777777;
+}
+
+footer p {
+  margin-bottom: 4px;
+}
+
+/* Adaptación para pantallas pequeñas / celulares */
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 15px;
+  }
+
+  .campo input,
+  .campo select {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+
+  .bloque-total {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .btn-secundario {
+    width: 100%;
+  }
+}
